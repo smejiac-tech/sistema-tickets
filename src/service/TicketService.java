@@ -1,13 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package service;
 
-/**
- *
- * @author Santiago M
- */
+import dao.TicketDao;
+import model.Ticket;
+import model.Vehiculo;
+
 public class TicketService {
-    
+
+    private TicketDao dao = new TicketDao();
+
+    public boolean venderTicket(Ticket t, Vehiculo v) {
+
+        if (!v.hayCupos()) {
+            System.out.println("Vehiculo lleno");
+            return false;
+        }
+
+        v.subirPasajero();
+        dao.guardar(t);
+        return true;
+    }
 }
