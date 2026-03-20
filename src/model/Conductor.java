@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author Santiago M
- */
-public class Conductor {
-    
+public class Conductor extends Persona {
+
+    private String licencia;
+    private String categoria;
+
+    public Conductor(String cedula, String nombre, String licencia, String categoria) {
+        super(cedula, nombre);
+        this.licencia = licencia;
+        this.categoria = categoria;
+    }
+
+    public boolean tieneLicencia() {
+        return licencia != null && !licencia.isEmpty();
+    }
+
+    @Override
+    public void imprimirDetalle() {
+        System.out.println("Conductor: " + nombre + " - Cedula: " + cedula +
+                " - Licencia: " + licencia + " - Categoria: " + categoria);
+    }
 }

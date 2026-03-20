@@ -1,13 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author Santiago M
- */
-public class Vehiculo {
-    
+public abstract class Vehiculo {
+    protected String placa;
+    protected String ruta;
+    protected int capacidadMaxima;
+    protected int pasajerosActuales;
+
+    public Vehiculo(String placa, String ruta, int capacidadMaxima) {
+        this.placa = placa;
+        this.ruta = ruta;
+        this.capacidadMaxima = capacidadMaxima;
+        this.pasajerosActuales = 0;
+    }
+
+    public boolean hayCupos() {
+        return pasajerosActuales < capacidadMaxima;
+    }
+
+    public void subirPasajero() {
+        if (hayCupos()) {
+            pasajerosActuales++;
+        }
+    }
+
+    public int getCapacidadDisponible() {
+        return capacidadMaxima - pasajerosActuales;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
 }
