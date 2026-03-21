@@ -17,7 +17,6 @@ public abstract class Vehiculo implements Imprimible {
         this.capacidadMaxima = capacidadMaxima;
         this.pasajerosActuales = 0;
     }
-
     public boolean hayCupos() {
         return pasajerosActuales < capacidadMaxima;
     }
@@ -38,7 +37,6 @@ public abstract class Vehiculo implements Imprimible {
     // Cada subclase devuelve su tarifa base
     public abstract double getTarifa();
 
-    @Override
     public void imprimirDetalle() {
         System.out.println("Vehiculo : " + getClass().getSimpleName());
         System.out.println("Placa    : " + placa);
