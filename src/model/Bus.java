@@ -10,15 +10,22 @@ package model;
  */
 
 public class Bus extends Vehiculo {
-    public Bus(String placa, Ruta ruta) {
-        super(placa, ruta, 45, 15000);
+
+    public Bus(String placa, String ruta) {
+        super(placa, ruta, 45);
     }
+
     @Override
-public String toString() {
-    return "Bus{" +
-            "placa='" + placa + '\'' +
-            ", ruta=" + ruta +
-            ", capacidad=" + capacidadMaxima +
-            '}';
-}
+    public double getTarifa() {
+        return 15000;
+    }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "placa='" + placa + '\'' +
+                ", ruta='" + ruta + '\'' +
+                ", capacidad=" + capacidadMaxima +
+                '}';
+    }
 }

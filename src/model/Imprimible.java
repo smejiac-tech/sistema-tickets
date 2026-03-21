@@ -4,10 +4,7 @@
  */
 package model;
 
-/**
- *
- * @author ronal
- */
-public class Imprimible {
-    
+
+public interface Imprimible {
+    void imprimirDetalle();
 }

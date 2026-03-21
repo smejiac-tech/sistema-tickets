@@ -4,6 +4,8 @@
  */
 package model;
 
+import model.Imprimible;
+
 public abstract class Vehiculo implements Imprimible {
 
     protected String placa;

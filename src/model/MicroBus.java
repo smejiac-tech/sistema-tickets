@@ -9,16 +9,22 @@ package model;
  * @author ronal
  */
 public class MicroBus extends Vehiculo {
-    public MicroBus(String placa, Ruta ruta) {
-        super(placa, ruta, 25, 10000);
-    }
-    @Override
-public String toString() {
-    return "MicroBus{" +
-            "placa='" + placa + '\'' +
-            ", ruta=" + ruta +
-            ", capacidad=" + capacidadMaxima +
-            '}';
-}
-}
 
+    public MicroBus(String placa, String ruta) {
+        super(placa, ruta, 25);
+    }
+
+    @Override
+    public double getTarifa() {
+        return 10000;
+    }
+
+    @Override
+    public String toString() {
+        return "MicroBus{" +
+                "placa='" + placa + '\'' +
+                ", ruta='" + ruta + '\'' +
+                ", capacidad=" + capacidadMaxima +
+                '}';
+    }
+}

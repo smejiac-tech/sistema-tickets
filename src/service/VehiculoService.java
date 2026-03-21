@@ -3,30 +3,54 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package service;
-
-import model.Vehiculo;
+ 
 import dao.VehiculoDAO;
-
-/**
- *
- * @author ronal
- */
+import model.*;
+import java.util.ArrayList;
+import java.util.List;
+ 
 public class VehiculoService {
-    private VehiculoDAO vehiculoDAO;
+ 
+    private List<Vehiculo> lista = new ArrayList<>();
+    private VehiculoDAO dao = new VehiculoDAO();
 
     public VehiculoService(VehiculoDAO vehiculoDAO) {
-        this.vehiculoDAO = vehiculoDAO;
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    public boolean registrarVehiculo(Vehiculo v) {
-
-        for (Vehiculo vehiculo : vehiculoDAO.listarVehiculos()) {
-            if (vehiculo.getPlaca().equals(v.getPlaca())) {
+ 
+    /**
+     * Carga vehículos desde el archivo al iniciar el sistema.
+     * El Lider debe implementar VehiculoDao.cargarTodos() también.
+     */
+    public void cargarDatos() {
+        lista = dao.cargarTodos();
+        System.out.println("  Vehiculos cargados   : " + lista.size());
+    }
+ 
+    public boolean agregarVehiculo(Vehiculo v) {
+        for (Vehiculo veh : lista) {
+            if (veh.getPlaca().equals(v.getPlaca())) {
+                System.out.println("Error: ya existe un vehiculo con la placa " + v.getPlaca());
                 return false;
             }
         }
-
-        vehiculoDAO.guardarVehiculo(v);
+        lista.add(v);
+        dao.guardarVehiculo(v);
         return true;
+    }
+ 
+    public List<Vehiculo> listar() {
+        return lista;
+    }
+ 
+    public Vehiculo buscarPorPlaca(String placa) {
+        for (Vehiculo v : lista) {
+            if (v.getPlaca().equals(placa)) return v;
+        }
+        return null;
+    }
+
+    public String registrarVehiculo(Vehiculo v1) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
