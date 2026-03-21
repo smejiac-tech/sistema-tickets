@@ -4,10 +4,22 @@
  */
 package dao;
 
+import model.Vehiculo;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ronal
  */
 public class VehiculoDAO {
-    
+    private List<Vehiculo> vehiculos = new ArrayList<>();
+
+    public void guardarVehiculo(Vehiculo v) {
+        vehiculos.add(v);
+    }
+
+    public List<Vehiculo> listarVehiculos() {
+        return vehiculos;
+    }
 }

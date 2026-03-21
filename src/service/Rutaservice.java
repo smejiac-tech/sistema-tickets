@@ -4,10 +4,18 @@
  */
 package service;
 
-/**
- *
- * @author ronal
- */
-public class Rutaservice {
-    
+import dao.RutaDAO;
+import model.Ruta;
+
+public class RutaService {
+
+    private RutaDAO rutaDAO;
+
+    public RutaService(RutaDAO rutaDAO) {
+        this.rutaDAO = rutaDAO;
+    }
+
+    public void registrarRuta(Ruta ruta) {
+        rutaDAO.guardarRuta(ruta);
+    }
 }
