@@ -8,11 +8,8 @@ import model.Vehiculo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author ronal
- */
 public class VehiculoDAO {
+
     private List<Vehiculo> vehiculos = new ArrayList<>();
 
     public void guardarVehiculo(Vehiculo v) {
@@ -24,6 +21,7 @@ public class VehiculoDAO {
     }
 
     public List<Vehiculo> cargarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      return vehiculos;
     }
 }
+
