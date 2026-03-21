@@ -1,5 +1,6 @@
 package view;
 
+import dao.ReservaDAO;
 import dao.RutaDAO;
 import dao.VehiculoDAO;
 import model.*;
@@ -16,7 +17,7 @@ public class Main {
 
         System.out.println("=== SISTEMA DE TRANSPORTE ===\n");
 
-        // DAO
+      
         RutaDAO rutaDAO = new RutaDAO();
         VehiculoDAO vehiculoDAO = new VehiculoDAO();
 
@@ -59,5 +60,23 @@ public class Main {
         // VALIDAR CUPOS
         System.out.println("\n=== VALIDACIÓN DE CUPOS ===");
         System.out.println("¿Vehículo 1 tiene cupos? " + v1.hayCupos());
+        
+        ReservaDAO reservaDAO = new ReservaDAO();
+ReservaService reservaService = new ReservaService(reservaDAO);
+
+// CREAR RESERVA
+Reserva res1 = new Reserva("RES1", "Juan", v1, "2026-03-25");
+
+System.out.println("\nCreando reserva...");
+System.out.println(reservaService.crearReserva(res1));
+
+// LISTAR
+System.out.println("\nReservas activas:");
+for (Reserva r : reservaService.listarActivas()) {
+    System.out.println(r);
+}
+
+// VERIFICAR VENCIDAS
+System.out.println("\nReservas vencidas canceladas: " + reservaService.verificarVencidas());
     }
 }
