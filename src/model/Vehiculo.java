@@ -30,4 +30,8 @@ public abstract class Vehiculo {
     public String getPlaca() {
         return placa;
     }
+
+    String getRuta() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
