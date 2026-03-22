@@ -2,6 +2,7 @@ package view;
 
 import model.*;
 import service.*;
+import service.RegistroService;
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        
+        RegistroService registroService = new RegistroService();
         VehiculoService vehiculoService = new VehiculoService();
         TicketService ticketService = new TicketService();
         EstadisticasService estadisticasService = new EstadisticasService();
@@ -39,12 +41,12 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("FUNCION EN CONSTRUCCION (equipo)");
-                    break;
+                     registroService.registrarPasajero(sc);
+                     break;
 
                 case 3:
-                    System.out.println("FUNCION EN CONSTRUCCION (equipo)");
-                    break;
+                     registroService.registrarConductor(sc);
+                     break;
 
                 case 4:
                     venderTicket(sc, vehiculoService, ticketService);
