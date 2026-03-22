@@ -38,7 +38,7 @@ public class Ticket implements Calculable, Imprimible {
         return destino;
     }
 
-    // 🔥 POLIMORFISMO (MEJOR)
+    //  POLIMORFISMO 
     private double getTarifaBase() {
         return vehiculo.getTarifa();
     }

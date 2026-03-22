@@ -26,6 +26,7 @@ public class VehiculoService {
         for (Vehiculo veh : vehiculoDAO.listarVehiculos()) {
             if (veh.getPlaca().equals(v.getPlaca())) {
 
+   
     public Iterable<Vehiculo> listar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
@@ -33,3 +34,4 @@ public class VehiculoService {
     public boolean agregarVehiculo(Vehiculo v) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+}

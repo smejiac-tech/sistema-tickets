@@ -1,8 +1,6 @@
 package model;
 
 
-package model;
-
 import model.Vehiculo;
 
 /**
