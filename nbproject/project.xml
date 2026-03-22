@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+<<<<<<< HEAD
             <name>sistema-tickets</name>
+=======
+            <name>SistemaTickets</name>
+>>>>>>> c232d867b0f3fc4feb36893e2f314a9119102c25
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

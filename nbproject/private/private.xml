@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/model/MicroBus.java</file>
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/dao/RutaDAO.java</file>
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/service/VehiculoService.java</file>
@@ -13,6 +14,20 @@
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/model/Ruta.java</file>
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/model/Bus.java</file>
             <file>file:/C:/Users/ronal/OneDrive/Documentos/NetBeansProjects/sistema-tickets/src/service/RutaService.java</file>
+=======
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/view/Main.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/dao/VehiculoDao.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/dao/TicketDao.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/dao/PasajeroDao.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/model/Calculable.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/model/Conductor.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/model/Vehiculo.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/service/EstadisticasService.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/service/TicketService.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/service/VehiculoService.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/model/Ticket.java</file>
+            <file>file:/C:/Users/Santiago%20M/OneDrive/Documents/NetBeansProjects/SistemaTickets/src/model/PasajeroEstudiante.java</file>
+>>>>>>> c232d867b0f3fc4feb36893e2f314a9119102c25
         </group>
     </open-files>
 </project-private>
