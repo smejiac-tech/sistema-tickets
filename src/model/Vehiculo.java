@@ -85,7 +85,12 @@ public abstract class Vehiculo {
         return placa;
     }
 
+<<<<<<< HEAD
     String getRuta() {
         return null;
+=======
+    public String getRuta() {
+    return ruta;
+>>>>>>> e070debda911445e9fac7902614b3a77baa5c461
     }
     

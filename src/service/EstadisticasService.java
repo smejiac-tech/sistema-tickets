@@ -86,4 +86,54 @@ public class EstadisticasService {
  
         System.out.println("=============================================");
     }
+        public void contarTiposPasajeros(List<Ticket> tickets) {
+
+        int regular = 0;
+        int estudiante = 0;
+        int adulto = 0;
+
+        for (Ticket t : tickets) {
+        Pasajero p = t.getPasajero();
+
+        if (p instanceof PasajeroRegular) regular++;
+        if (p instanceof PasajeroEstudiante) estudiante++;
+        if (p instanceof PasajeroAdultoMayor) adulto++;
+        }
+
+        System.out.println("Pasajeros Regular: " + regular);
+        System.out.println("Pasajeros Estudiante: " + estudiante);
+        System.out.println("Pasajeros Adulto Mayor: " + adulto);
+    }
+        public void vehiculoMasVendido(List<Ticket> tickets) {
+
+        if (tickets.isEmpty()) {
+            System.out.println("No hay tickets");
+            return;
+        }
+
+        Vehiculo mejor = null;
+        int max = 0;
+
+        for (Ticket t : tickets) {
+
+            Vehiculo v = t.getVehiculo();
+            int contador = 0;
+
+            for (Ticket t2 : tickets) {
+                if (t2.getVehiculo().getPlaca().equals(v.getPlaca())) {
+                    contador++;
+                }
+            }
+
+            if  (contador > max) {
+                max = contador;
+                mejor = v;
+            }
+        }
+
+        if (mejor != null) {
+        System.out.println("Vehiculo con mas ventas: " + mejor.getPlaca());
+        System.out.println("Tickets vendidos: " + max);
+        }
+    }
 }

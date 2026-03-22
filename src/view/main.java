@@ -25,6 +25,8 @@ public class Main {
             System.out.println("5. Listar Vehiculos");
             System.out.println("6. Listar Tickets");
             System.out.println("7. Ver Total Recaudado");
+            System.out.println("8. Ver estadisticas de pasajeros");
+            System.out.println("9. Vehiculo con mas ventas");
             System.out.println("0. Salir");
             System.out.print("Opcion: ");
 
@@ -59,6 +61,13 @@ public class Main {
                 case 7:
                     double total = estadisticasService.totalRecaudado(ticketService.listar());
                     System.out.println("Total recaudado: $" + total);
+                    break;
+               case 8:
+                    estadisticasService.contarTiposPasajeros(ticketService.listarTickets());
+                    break;
+
+                case 9:
+                    estadisticasService.vehiculoMasVendido(ticketService.listarTickets());
                     break;
             }
 

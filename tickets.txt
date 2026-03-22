@@ -1,1 +1,4 @@
 Ticket generado
+1;PEPE;Regular;HYS342;COLOMBIA;BOGOTA;2026-03-21;15000.0
+1;oeoe;Regular;h;clo;be;2026-03-21;15000.0
+1;oeoe;Regular;h32;col;boe;2026-03-21;15000.0
