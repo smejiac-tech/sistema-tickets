@@ -87,10 +87,14 @@ public class Main {
                 v = new Buseta(placa, ruta);
                 break;
             case 2:
-                v = new MicroBus(placa, ruta);
+                v = new MicroBus(placa, ruta) {
+            @Override
+            public void imprimirDetalle() {
+            }
+        };
                 break;
             case 3:
-                v = new Bus(placa, ruta);
+                v = new Bus(placa, ruta) {};
                 break;
         }
 
@@ -154,6 +158,16 @@ public class Main {
 
         for (Ticket t : ts.listar()) {
             t.imprimirDetalle();
+        }
+    }
+
+    private static class Buseta extends Vehiculo {
+
+        public Buseta(String placa, String ruta) {
+        }
+
+        @Override
+        public void imprimirDetalle() {
         }
     }
 }

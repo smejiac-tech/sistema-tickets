@@ -16,7 +16,6 @@ public class PasajeroAdultoMayor extends Pasajero {
         return "AdultoMayor";
     }
  
-    @Override
     public void imprimirDetalle() {
         System.out.println("=== PASAJERO ===");
         System.out.println("Tipo   : Adulto Mayor (30% descuento)");

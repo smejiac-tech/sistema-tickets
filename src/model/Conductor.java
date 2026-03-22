@@ -24,7 +24,7 @@ public class Conductor extends Persona {
         return licencia != null && !licencia.trim().isEmpty();
     }
 
-    @Override
+    
     public void imprimirDetalle() {
         System.out.println("=== CONDUCTOR ===");
         System.out.println("Cedula    : " + cedula);

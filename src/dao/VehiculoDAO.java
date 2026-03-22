@@ -4,24 +4,36 @@
  */
 package dao;
 
-import model.Vehiculo;
 import java.util.ArrayList;
 import java.util.List;
+import model.Vehiculo;
 
 public class VehiculoDAO {
 
-    private List<Vehiculo> vehiculos = new ArrayList<>();
+    private List<Vehiculo> vehiculos;
 
+    public VehiculoDAO() {
+        vehiculos = new ArrayList<>();
+    }
+
+    // Guardar vehículo
     public void guardarVehiculo(Vehiculo v) {
         vehiculos.add(v);
     }
 
+    // Listar todos los vehículos
     public List<Vehiculo> listarVehiculos() {
         return vehiculos;
     }
 
-    public List<Vehiculo> cargarTodos() {
-      return vehiculos;
+    // Buscar vehículo por placa
+    public Vehiculo buscarPorPlaca(String placa) {
+        for (Vehiculo v : vehiculos) {
+            if (v.getPlaca().equalsIgnoreCase(placa)) {
+                return v;
+            }
+        }
+        return null;
     }
 }
 

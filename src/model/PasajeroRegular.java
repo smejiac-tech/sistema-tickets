@@ -16,7 +16,7 @@ public class PasajeroRegular extends Pasajero {
         return "Regular";
     }
  
-    @Override
+   
     public void imprimirDetalle() {
         System.out.println("=== PASAJERO ===");
         System.out.println("Tipo   : Regular (sin descuento)");

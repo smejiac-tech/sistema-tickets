@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -9,11 +9,38 @@ import model.Imprimible;
 
 public abstract class Vehiculo implements Imprimible {
 
-=======
-package model;
+
+
+
+    public String getPlaca() {
+        return null;
+    }
+
+    public boolean hayCupos() {
+        return false;
+    }
+
+    public void subirPasajero() {
+    }
+
+
+    void getRuta() {
+    }
+
+    public void getCapacidadDisponible() {
+    }
+
+    double getTarifa() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private static class model {
+
+        public model() {
+        }
+    }
 
 public abstract class Vehiculo {
->>>>>>> c232d867b0f3fc4feb36893e2f314a9119102c25
     protected String placa;
     protected String ruta;
     protected int capacidadMaxima;
@@ -25,10 +52,7 @@ public abstract class Vehiculo {
         this.capacidadMaxima = capacidadMaxima;
         this.pasajerosActuales = 0;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> c232d867b0f3fc4feb36893e2f314a9119102c25
     public boolean hayCupos() {
         return pasajerosActuales < capacidadMaxima;
     }
@@ -43,9 +67,8 @@ public abstract class Vehiculo {
         return capacidadMaxima - pasajerosActuales;
     }
 
-<<<<<<< HEAD
+
     public String getPlaca() { return placa; }
-    public String getRuta()  { return ruta;  }
 
     // Cada subclase devuelve su tarifa base
     public abstract double getTarifa();
@@ -57,13 +80,12 @@ public abstract class Vehiculo {
         System.out.println("Capacidad: " + capacidadMaxima);
         System.out.println("Cupos    : " + getCapacidadDisponible());
         System.out.printf ("Tarifa   : $%.0f%n", getTarifa());
-=======
+
     public String getPlaca() {
         return placa;
     }
 
     String getRuta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
->>>>>>> c232d867b0f3fc4feb36893e2f314a9119102c25
+        return null;
     }
-}
+    

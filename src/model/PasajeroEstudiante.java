@@ -16,7 +16,7 @@ public class PasajeroEstudiante extends Pasajero {
         return "Estudiante";
     }
  
-    @Override
+
     public void imprimirDetalle() {
         System.out.println("=== PASAJERO ===");
         System.out.println("Tipo   : Estudiante (15% descuento)");
